@@ -1,6 +1,6 @@
 # PMFCParty Portal
 
-The PMFCParty Portal is a containerized end-to-end web application consisting of two that servers two purposes:
+The PMFCParty Portal is a containerized end-to-end web application that servers two purposes:
 - Membership Portal:
   - User login
   - Google Maps Landing page
