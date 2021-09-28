@@ -1,4 +1,4 @@
-# PMFCParty Portal
+# <img src="images/pmfcp_logo.svg" width="100px" height="100px"> PMFCParty Portal
 
 The PMFCParty Portal is a containerized end-to-end web application that servers two purposes:
 - Membership Portal:
