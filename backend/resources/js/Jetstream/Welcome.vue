@@ -69,7 +69,7 @@
 
                 <div class="ml-12">
                     <div class="mt-2 text-sm text-gray-500">
-                        This card may be used to display relevant documents belonging to the member. Or it can be used to any other purpose as desired.
+                        This card may be used to display relevant documents belonging to a member. Or it can be used to any other purpose as desired.
                     </div>
                 </div>
             </div>
