@@ -7,7 +7,7 @@
         </template>
 
         <div class="mb-4 text-sm text-gray-600">
-            Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+            Forgot your password? Enter your email address below and we will email you a password reset link.
         </div>
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">

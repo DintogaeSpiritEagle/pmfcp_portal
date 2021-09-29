@@ -2,6 +2,12 @@
     <Head title="Log in" />
 
     <jet-authentication-card>
+
+        <div class="block m-4">
+            <span class="block font-large text-2xl text-center text-black-300"><h3>PMFCParty Membership Portal</h3></span>
+            <span class="block font-large text-xl text-center text-black-300"><h3>Login</h3></span>
+        </div>
+
         <template #logo>
             <jet-authentication-card-logo />
         </template>

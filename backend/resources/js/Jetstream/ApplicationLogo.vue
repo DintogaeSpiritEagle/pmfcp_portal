@@ -1,5 +1,5 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.52 216.22"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#2e3192;}.cls-3{fill:#056839;}.cls-4{fill:#ffde16;}.cls-5{fill:#ed1c24;}.cls-6{fill:#f7f7f7;}.cls-7{fill:#242021;}</style></defs>
+    <svg class="w-24 h-24" viewBox="0 0 268.52 216.22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Layer_2" data-name="Layer 2">
             <g id="Layer_1-2" data-name="Layer 1">
             <path class="cls-1" d="M255,61.39c-9.8-16.32-24.25-30.25-41.09-40.28C190.35,7.1,162.89.46,135.65,0,91.15-.69,43.28,17.18,17.48,55,7.87,69.07,1.57,85.53.25,102.58c-3.08,40,22.34,75.08,56.09,93.42,41.73,22.67,94.47,27.31,139.13,8.68,3.74-1.56,7.42-3.33,11-5.21,27.49-14.45,51-38.22,59.12-68.87C272.19,105.8,267.19,81.74,255,61.39Z" />
@@ -23,3 +23,4 @@
         </g>
     </svg>
 </template>
+<style>.cls-1{fill:#fff;}.cls-2{fill:#2e3192;}.cls-3{fill:#056839;}.cls-4{fill:#ffde16;}.cls-5{fill:#ed1c24;}.cls-6{fill:#f7f7f7;}.cls-7{fill:#242021;}</style>
