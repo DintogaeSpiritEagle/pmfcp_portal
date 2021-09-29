@@ -8,8 +8,8 @@ FROM nginx:1.20-alpine
 # Updated maintainer label for PMFCParty Project
 LABEL maintainer="Spirit Eagle <yamis.spiriteagle@gmail.com>"
 
-# Initialize terminal
-SHELL ["/bin/bash", "-oeux", "pipefail", "-c"]
+# Initialize ash shell
+SHELL ["/bin/ash", "-oeux", "pipefail", "-c"]
 
 # Set TZ
 ENV TZ=UTC
