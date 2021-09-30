@@ -15,3 +15,5 @@ yarn-error.log
 /.vscode
 /logs
 Makefile-master
+/backend/public/css/app.css
+/backend/public/js/app.js
