@@ -15,6 +15,7 @@ use Inertia\Inertia;
 |
 */
 
+// Default route render
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -24,6 +25,10 @@ Route::get('/', function () {
     ]);
 });
 
+// Dashboard route protection
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+// Include customized jetstream routes
+require_once __DIR__ . '/jetstream.php';
