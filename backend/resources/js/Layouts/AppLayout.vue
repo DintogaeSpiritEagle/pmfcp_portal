@@ -5,10 +5,14 @@
         <jet-banner />
 
         <div class="min-h-screen bg-gray-800">
+
             <nav class="bg-gray-800 border-b border-gray-100">
+
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
                     <div class="flex justify-between h-16">
+
                         <div class="flex">
                             <!-- Logo -->
                             <div class="flex-shrink-0 flex items-center">
@@ -23,13 +27,26 @@
                                     <font class="text-white text-bold">Network</font>
                                 </jet-nav-link>
 
-                                <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+                                <jet-nav-link v-if="$page.props.user" :href="route('dashboard')" :active="route().current('dashboard')">
                                     <font class="text-white text-bold">Dashboard</font>
                                 </jet-nav-link>
+
                             </div>
+
+                            <div v-if="!$page.props.user" class="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex relative top-6 right-0 h-16 w-16 items-right">
+                                <Link :href="route('login')" class="text-sm text-white underline">
+                                    Login
+                                </Link>
+
+                                <Link :href="route('register')" class="text-sm text-white underline">
+                                    Register
+                                </Link>
+                            </div>
+
                         </div>
 
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <div v-if="$page.props.user" class="hidden sm:flex sm:items-center sm:ml-6">
+
                             <div class="ml-3 relative">
                                 <!-- Teams Dropdown -->
                                 <jet-dropdown align="right" width="60" v-if="$page.props.jetstream.hasTeamFeatures">
@@ -132,7 +149,7 @@
                         </div>
 
                         <!-- Hamburger -->
-                        <div class="-mr-2 flex items-center sm:hidden">
+                        <div v-if="$page.props.user" class="-mr-2 flex items-center sm:hidden">
                             <button @click="showingNavigationDropdown = ! showingNavigationDropdown" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
                                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                     <path :class="{'hidden': showingNavigationDropdown, 'inline-flex': ! showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -144,10 +161,10 @@
                 </div>
 
                 <!-- Responsive Navigation Menu -->
-                <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
+                <div v-if="$page.props.user" :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                            Dashboarddfasdfasdfasdfaf
                         </jet-responsive-nav-link>
                     </div>
 
@@ -218,6 +235,7 @@
                         </div>
                     </div>
                 </div>
+
             </nav>
 
             <!-- Page Heading -->

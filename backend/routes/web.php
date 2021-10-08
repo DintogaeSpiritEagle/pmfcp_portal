@@ -16,14 +16,15 @@ use Inertia\Inertia;
 */
 
 // Default route render
+// The Application landing page is the "Network" component.
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('Network', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name('network');
 
 // Dashboard route protection
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

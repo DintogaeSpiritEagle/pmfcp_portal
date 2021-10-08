@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.4",
     "vue3-google-map": "^0.8.2"
   }
 }

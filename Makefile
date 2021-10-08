@@ -16,6 +16,8 @@ init:
 	docker-compose exec app chmod -R 777 storage bootstrap/cache
 install-googlemapsapi:
 	npm install vue3-google-map
+install-googlemaps-js-api-loader:
+	npm install @googlemaps/js-api-loader
 remake:
 	@make destroy
 	@make init

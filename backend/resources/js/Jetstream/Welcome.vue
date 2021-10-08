@@ -6,7 +6,7 @@
             </div>
 
             <div class="mt-8 text-2xl">
-                Welcome to the PMFCParty Members Portal!
+                Dashboard
             </div>
 
             <div class="mt-6 text-gray-500">
@@ -97,6 +97,6 @@
     export default defineComponent({
         components: {
             JetApplicationLogo,
-        },
+        }
     })
 </script>
