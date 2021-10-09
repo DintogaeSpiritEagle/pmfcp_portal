@@ -4,12 +4,12 @@
 
         <div class="w-screen">
 
-            <div class="mt-6 text-gray-500">
-                CONTACT US | Email: info@pmfcparty.com | Website: <a href="http://www.pmfcparty.com">www.pmfcparty.com</a>
+            <div class="mt-6 text-white">
+                CONTACT US | Email: info@pmfcparty.com | Website: <a href="https://www.pmfcparty.com/contact-us">www.pmfcparty.com</a>
             </div>
 
-            <div class="mt-6 text-gray-500">
-                <div class="text-sm text-gray-500">
+            <div class="mt-6 text-white">
+                <div class="text-sm text-white">
                     Powered by <a href="http://www.pmfcparty.com">&copy;PMFCParty PNG 2021</a>
                 </div>
             </div>
