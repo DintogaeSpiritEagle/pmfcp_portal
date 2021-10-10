@@ -15,12 +15,18 @@ use Laravel\Jetstream\Http\Controllers\TeamInvitationController;
 use Laravel\Jetstream\Jetstream;
 
 Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
+
+    // Jetstream web / public routes
     if (Jetstream::hasTermsAndPrivacyPolicyFeature()) {
         Route::get('/terms-of-service', [TermsOfServiceController::class, 'show'])->name('terms.show');
         Route::get('/privacy-policy', [PrivacyPolicyController::class, 'show'])->name('policy.show');
     }
 
+    // Route::get('/search', [])->name('search');
+
+    // Jetstream Auth routes
     Route::group(['middleware' => ['auth', 'verified']], function () {
+
         // User & Profile...
         Route::get('/profile', [UserProfileController::class, 'show'])
                     ->name('profile.show');

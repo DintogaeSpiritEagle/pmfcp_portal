@@ -4,7 +4,7 @@
 
         <jet-banner />
 
-        <div class="min-h-screen bg-gray-800">
+        <div class="min-h-screen bg-gray-300">
 
             <nav class="bg-gray-800 border-b border-gray-100">
 
