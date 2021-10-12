@@ -1,0 +1,137 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Electorate;
+use Illuminate\Database\Seeder;
+
+class ElectorateSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $electorate_arr = [
+            ['name' => 'Abau Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Aitape-Lumi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Alotau Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Ambunti-Dreikikir Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Angalimp-South Waghi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Angoram Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Mul-Baiyer Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Bogia Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Bougainville Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Bulolo Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Central Bougainville Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Central Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Chimbu Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Chuave Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Daulo Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Dei Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'East New Britain Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'East Sepik Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Eastern Highlands Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Enga Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Esa-Ala Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Finschafen Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Gazelle Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Goilala Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Goroka Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Gulf Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Gumine Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Hagen Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Hela Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Henganofi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Huon Gulf Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Ialibu-Pangia Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Ijivitari Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Imbonggu Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Jimi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Jiwaka Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kabwum Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kagua-Erave Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kainantu Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kairuku-Hiri Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kandep Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kandrian-Gloucester Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Karimui-Nomane Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kavieng Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kerema Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kerowagi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kikori Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kiriwina-Goodenough Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kokopo Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Komo-Magarima Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kompiam-Ambum Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Koroba-Lake Kopiago Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Kundiawa Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Lae Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Lagaip-Porgera Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Lufa Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Madang Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Madang Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Manus Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Manus Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Maprik Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Markham Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Mendi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Menyamya Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Middle Fly Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Middle Ramu Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Milne Bay Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Moresby North-East Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Moresby North-West Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Moresby South Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Morobe Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Namatanai Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'National Capital District Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Nawae Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'New Ireland Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Nipa-Kutubu Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'North Bougainville Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'North Fly Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'North Waghi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Northern Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Nuku Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Obura-Wonenara Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Okapa Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Pomio Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Rabaul Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Rai Coast Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Rigo Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Samarai-Murua Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Sinasina-Yongomugl Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Sohe Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'South Bougainville Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'South Fly Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Southern Highlands Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Sumkar Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Talasea Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Tambul-Nebilyer Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Tari Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Telefomin Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Tewae-Siassi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Unggai-Bena Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Usino-Bundi Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Vanimo-Green River Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Wabag Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Wapenamanda Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'West New Britain Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'West Sepik Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Western Highlands Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Western Provincial', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Wewak Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Wosera-Gaui Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+            ['name' => 'Yangoru-Saussia Open', 'province_id' => 1, 'region_id' => 1, 'seat_type' => '', 'lat' => '', 'lng' => ''],
+        ];
+
+        for ($i=0; $i < 111; $i++) {
+            Electorate::insert(
+                $electorate_arr[$i]
+            );
+        }
+    }
+}

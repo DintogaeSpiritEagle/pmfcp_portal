@@ -33,3 +33,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 // Include customized jetstream routes
 require_once __DIR__ . '/jetstream.php';
+
+// Include customized fortify routes
+require_once __DIR__ . '/fortify.php';

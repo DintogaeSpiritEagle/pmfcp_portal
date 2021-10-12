@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
 use Laravel\Jetstream\Http\Controllers\Inertia\ApiTokenController;
@@ -22,7 +23,8 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
         Route::get('/privacy-policy', [PrivacyPolicyController::class, 'show'])->name('policy.show');
     }
 
-    // Route::get('/search', [])->name('search');
+    // Search Network route
+    Route::post('/search', [SearchController::class, 'show'])->name('search');
 
     // Jetstream Auth routes
     Route::group(['middleware' => ['auth', 'verified']], function () {
