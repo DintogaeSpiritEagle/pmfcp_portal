@@ -39,6 +39,22 @@ DB_ROOT_PASSWORD=root
 ```bash
 $ make migrate
 ```
-5. Begin building!
+5. Seed Database. `Note: run the docker-compose commands below strictly in this order to prevent foreign key constraint errors`.
+```bash
+$ docker-compose exec app php artisan db:seed --class=RegionSeeder    
+Database seeding completed successfully.
+
+$ docker-compose exec app php artisan db:seed --class=ProvinceSeeder  
+Database seeding completed successfully.
+
+$ docker-compose exec app php artisan db:seed --class=ElectorateSeeder
+Database seeding completed successfully.
+```
+6. If you experience any database related errors, then run the following db rollback command, and repeat step 5.
+```bash
+$ make rollback-test
+```
+
+7. Begin building!
 
 For more info, please email _Soxx_ or _SpiritEagle_ at ict@pmfcparty.com.
