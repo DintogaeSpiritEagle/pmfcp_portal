@@ -33,6 +33,7 @@ class JetstreamServiceProvider extends ServiceProvider
     {
         $this->configurePermissions();
 
+        // Team Feature Permissions
         Jetstream::createTeamsUsing(CreateTeam::class);
         Jetstream::updateTeamNamesUsing(UpdateTeamName::class);
         Jetstream::addTeamMembersUsing(AddTeamMember::class);
@@ -40,6 +41,12 @@ class JetstreamServiceProvider extends ServiceProvider
         Jetstream::removeTeamMembersUsing(RemoveTeamMember::class);
         Jetstream::deleteTeamsUsing(DeleteTeam::class);
         Jetstream::deleteUsersUsing(DeleteUser::class);
+
+        // Network Members Permissions
+        // Jetstream::addNetworkMembersUsing(AddNetworkMembers::class);
+        // Jetstream::createNetworkMembersUsing(CreateNetworkMembers::class);
+        // Jetstream::deleteNetworkMembersUsing(DeleteNetworkMembers::class);
+        // Jetstream::updateNetworkMembersUsing(UpdateNetworkMembers::class);
     }
 
     /**

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PaymentGateWayCallsController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
@@ -25,6 +27,9 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
 
     // Search Network route
     Route::post('/search', [SearchController::class, 'show'])->name('search');
+
+    // Donate API route
+    Route::get('/donate', [PaymentGateWayCallsController::class, 'create'])->name('donate');
 
     // Jetstream Auth routes
     Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -71,5 +76,13 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
             Route::delete('/team-invitations/{invitation}', [TeamInvitationController::class, 'destroy'])
                         ->name('team-invitations.destroy');
         }
+
+        // PMFC Members Network routes...
+        Route::get('/network/member/list', [MemberController::class, 'index'])->name('network-members.index');
+        Route::get('/network/member/create', [MemberController::class, 'create'])->name('network-member.create');
+        Route::post('/network/member/store', [MemberController::class, 'store'])->name('network-member.store');
+        Route::get('/network/member/show/{member}', [MemberController::class, 'show'])->name('network-member.show');
+        Route::put('/network/member/{member}', [MemberController::class, 'update'])->name('network-member.update');
+        Route::delete('/network/member/delete/{member}', [MemberController::class, 'destroy'])->name('network-member.destroy');
     });
 });

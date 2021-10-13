@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PaymentGateWayCalls;
 use Illuminate\Http\Request;
+use Laravel\Jetstream\Jetstream;
 
 class PaymentGateWayCallsController extends Controller
 {
@@ -19,12 +20,14 @@ class PaymentGateWayCallsController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return Jetstream::inertia()->render($request, 'Donate', [
+            'test' => "Render the Donations form page here",
+        ]);
     }
 
     /**

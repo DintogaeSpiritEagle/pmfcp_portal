@@ -27,6 +27,10 @@
                                     <font class="text-white text-bold">Network</font>
                                 </jet-nav-link>
 
+                                <jet-nav-link :href="route('donate')">
+                                    <font class="text-white text-bold">Donate</font>
+                                </jet-nav-link>
+
                                 <jet-nav-link v-if="$page.props.user" :href="route('dashboard')" :active="route().current('dashboard')">
                                     <font class="text-white text-bold">Dashboard</font>
                                 </jet-nav-link>
