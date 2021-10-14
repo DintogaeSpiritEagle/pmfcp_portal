@@ -98,12 +98,13 @@
             canLogin: Boolean,
             canRegister: Boolean,
             laravelVersion: String,
-            phpVersion: String
+            phpVersion: String,
         },
 
         setup() {
 
-            const testVar = "Donate Form goes here.";
+            const ipg_request_endpoint = "https://www.";
+            const testVar = "Donate Form goes here. Ok got it.";
 
             return { testVar }
         }
