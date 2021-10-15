@@ -2,7 +2,7 @@
     <app-layout title="Create Donate">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Create Donate
+                Make a Donation
             </h2>
         </template>
 
