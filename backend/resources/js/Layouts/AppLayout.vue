@@ -27,7 +27,7 @@
                                     <font class="text-white text-bold">Network</font>
                                 </jet-nav-link>
 
-                                <jet-nav-link :href="route('donate')">
+                                <jet-nav-link :href="route('createdonate')">
                                     <font class="text-white text-bold">Donate</font>
                                 </jet-nav-link>
 
@@ -168,7 +168,7 @@
                 <div v-if="$page.props.user" :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboarddfasdfasdfasdfaf
+                            Dashboard
                         </jet-responsive-nav-link>
                     </div>
 

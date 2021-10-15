@@ -28,8 +28,9 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
     // Search Network route
     Route::post('/search', [SearchController::class, 'show'])->name('search');
 
-    // Donate API route
-    Route::get('/donate', [PaymentGateWayCallsController::class, 'create'])->name('donate');
+    // Declare IPG API routes here
+    Route::get('/donate', [PaymentGateWayCallsController::class, 'create'])->name('createdonate');
+    Route::post('/donate/post', [PaymentGateWayCallsController::class, 'store'])->name('donate');
 
     // Jetstream Auth routes
     Route::group(['middleware' => ['auth', 'verified']], function () {

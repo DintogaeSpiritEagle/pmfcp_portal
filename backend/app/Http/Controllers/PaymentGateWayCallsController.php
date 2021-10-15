@@ -25,11 +25,12 @@ class PaymentGateWayCallsController extends Controller
      */
     public function create(Request $request)
     {
-        $test = "Successful payment.";
+        $success = "Successful payment.";
+        $failed = "Failed payment.";
 
-        return Jetstream::inertia()->render($request, 'Donate', [
-            'test' => $test,
-            'test2' => "test var 2"
+        return Jetstream::inertia()->render($request, 'Donations/Donate', [
+            'test' => $success,
+            'test2' => $failed
         ]);
     }
 
@@ -41,6 +42,8 @@ class PaymentGateWayCallsController extends Controller
      */
     public function store(Request $request)
     {
+        return $request;
+
         // 1. Make an IPG request call to the endoint
         $endpoint_request_url = config('bspipg_request_url_endpoint');
         $endpoint_callback_url = config('ipg_callback_url_endpoint');
