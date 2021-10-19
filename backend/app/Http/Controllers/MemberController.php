@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use App\Models\Membership;
 use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Laravel\Jetstream\Jetstream;
@@ -21,25 +22,14 @@ class MemberController extends Controller
      */
     public function index(Request $request)
     {
-        // $team = Jetstream::newTeamModel()->findOrFail($teamId);
 
-        // Gate::authorize('view', $team);
+        //dd(Member::find(1)->electorate->province->name);
+        $networkmembers = Member::with(['electorate','membership_type'])->get();
 
-        // return Jetstream::inertia()->render($request, 'Teams/Show', [
-        //     'team' => $team->load('owner', 'users', 'teamInvitations'),
-        //     'availableRoles' => array_values(Jetstream::$roles),
-        //     'availablePermissions' => Jetstream::$permissions,
-        //     'defaultPermissions' => Jetstream::$defaultPermissions,
-        //     'permissions' => [
-        //         'canAddTeamMembers' => Gate::check('addTeamMember', $team),
-        //         'canDeleteTeam' => Gate::check('delete', $team),
-        //         'canRemoveTeamMembers' => Gate::check('removeTeamMember', $team),
-        //         'canUpdateTeam' => Gate::check('update', $team),
-        //     ],
-        // ]);
+        //dd(gettype($networkmembers));
 
-        return Jetstream::inertia()->render($request, 'MembersList', [
-            'test' => "Render NetworkMembersList here",
+        return Jetstream::inertia()->render($request, 'NetworkMembers/Show', [
+            'networkmembers' => $networkmembers
         ]);
     }
 

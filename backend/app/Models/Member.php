@@ -30,7 +30,7 @@ class Member extends Model
      */
     public function membership_type()
     {
-        return $this->hasOne(MembershipType::class);
+        return $this->belongsTo(MembershipType::class);
     }
 
     /**
@@ -38,6 +38,14 @@ class Member extends Model
      */
     public function electorate()
     {
-        return $this->hasOne(Electorate::class);
+        return $this->belongsTo(Electorate::class);
+    }
+
+    /**
+     * Get the Province associated with a member
+     */
+    public function province()
+    {
+        return $this->electorate->province();
     }
 }

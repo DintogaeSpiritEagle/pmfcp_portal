@@ -23,7 +23,7 @@ class Region extends Model
      */
     public function provinces()
     {
-        return $this->belongsToMany(Province::class);
+        return $this->hasMany(Province::class);
     }
 
     /**
@@ -31,6 +31,6 @@ class Region extends Model
      */
     public function electorates()
     {
-        return $this->belongsToMany(Electorate::class);
+        return $this->hasMany(Electorate::class);
     }
 }

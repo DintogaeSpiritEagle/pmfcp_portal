@@ -4,17 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Electorate;
 use Illuminate\Http\Request;
+use Laravel\Jetstream\Jetstream;
 
 class ElectorateController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $electorates = Electorate::with(['region','province'])->get();
+
+        return Jetstream::inertia()->render($request, 'Electorates/Show', [
+            'electorates' => $electorates
+        ]);
     }
 
     /**

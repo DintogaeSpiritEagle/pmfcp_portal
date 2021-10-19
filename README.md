@@ -35,26 +35,14 @@ DB_USERNAME=pmfcp
 DB_PASSWORD=pmfcp
 DB_ROOT_PASSWORD=root
 ``` 
-4. Run DB migrations
+4. Run the DB migrations & seed the database with test data
 ```bash
-$ make migrate
+$ make fresh
 ```
-5. Seed Database. `Note: run the docker-compose commands below strictly in this order to prevent foreign key constraint errors`.
-```bash
-$ docker-compose exec app php artisan db:seed --class=RegionSeeder    
-Database seeding completed successfully.
-
-$ docker-compose exec app php artisan db:seed --class=ProvinceSeeder  
-Database seeding completed successfully.
-
-$ docker-compose exec app php artisan db:seed --class=ElectorateSeeder
-Database seeding completed successfully.
-```
-6. If you experience any database related errors, then run the following db rollback command, and repeat step 5.
+5. If you experience any database related errors, then run the following db rollback command, and repeat step 5.
 ```bash
 $ make rollback-test
 ```
-
-7. Begin building!
+6. Begin building!
 
 For more info, please email _Soxx_ or _SpiritEagle_ at ict@pmfcparty.com.

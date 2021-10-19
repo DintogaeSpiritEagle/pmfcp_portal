@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ElectorateController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PaymentGateWayCallsController;
 use App\Http\Controllers\SearchController;
+use App\Models\Electorate;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Http\Controllers\CurrentTeamController;
 use Laravel\Jetstream\Http\Controllers\Inertia\ApiTokenController;
@@ -85,5 +87,8 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
         Route::get('/network/member/show/{member}', [MemberController::class, 'show'])->name('network-member.show');
         Route::put('/network/member/{member}', [MemberController::class, 'update'])->name('network-member.update');
         Route::delete('/network/member/delete/{member}', [MemberController::class, 'destroy'])->name('network-member.destroy');
+
+        // Electorates routes
+        Route::get('/electorates/list', [ElectorateController::class, 'index'])->name('electorates.list');
     });
 });

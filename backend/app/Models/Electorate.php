@@ -28,7 +28,7 @@ class Electorate extends Model
      */
     public function province()
     {
-        return $this->hasOne(Province::class);
+        return $this->belongsTo(Province::class);
     }
 
     /**
@@ -36,7 +36,7 @@ class Electorate extends Model
      */
     public function region()
     {
-        return $this->hasOne(Region::class);
+        return $this->belongsTo(Region::class);
     }
 
     /**
@@ -44,6 +44,6 @@ class Electorate extends Model
      */
     public function members()
     {
-        return $this->belongsToMany(Member::class);
+        return $this->hasMany(Member::class);
     }
 }

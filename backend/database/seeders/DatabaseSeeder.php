@@ -13,6 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // Note: Seeding in this order is crucial as the db is protected by foreign key constraints.
+        $this->call(RegionSeeder::class);
+        $this->call(ProvinceSeeder::class);
+        $this->call(ElectorateSeeder::class);
+        $this->call(MembershipTypeSeeder::class);
+        $this->call(MemberSeeder::class);
     }
 }

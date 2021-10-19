@@ -25,9 +25,9 @@ class Province extends Model
     /**
      * Get the electorates that belong to this province
      */
-    public function electorates()
+    public function electorate()
     {
-        return $this->belongsToMany(Electorate::class);
+        return $this->hasMany(Electorate::class);
     }
 
     /**
@@ -35,6 +35,6 @@ class Province extends Model
      */
     public function region()
     {
-        return $this->hasOne(Region::class);
+        return $this->belongsTo(Region::class);
     }
 }
