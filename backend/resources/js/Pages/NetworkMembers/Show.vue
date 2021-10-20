@@ -26,7 +26,7 @@
 
                         <div class="flex items-center justify-center sm:text-left">
 
-                            <table class="table-auto whitespace-nowrap">
+                            <table class="flex-1 h-8 table-auto whitespace-nowrap overflow-x-auto">
 
                                 <thead class="bg-gray-400">
                                     <tr class="text-left font-bold">
@@ -35,6 +35,8 @@
                                         <td class="p-2">FirstName</td>
                                         <td class="p-2">Electorate</td>
                                         <td class="p-2">MembershipType</td>
+                                        <td class="p-2">Latitude</td>
+                                        <td class="p-2">Longitude</td>
                                         <td class="p-2">Actions</td>
                                     </tr>
                                 </thead>
@@ -46,6 +48,8 @@
                                             <td class="p-2">{{ networkmember.last_name }}</td>
                                             <td class="p-2">{{ networkmember.electorate.name }}</td>
                                             <td class="p-2">{{ networkmember.membership_type.membership_type }}</td>
+                                            <td class="p-2">{{ networkmember.lat }}</td>
+                                            <td class="p-2">{{ networkmember.lng }}</td>
                                             <td class="p-2">Edit | Delete</td>
                                         </tr>
 

@@ -25,10 +25,10 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
+            'name' => 'PMFCP Test',
+            'email' => 'test@pmfcparty.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => '$2y$10$.CxyzBQgkrB0hpXjqYCAw.1MFEGm6gpE7KYcBZCux8ak4RI7CU2Pa', // abcd1234
             'remember_token' => Str::random(10),
         ];
     }

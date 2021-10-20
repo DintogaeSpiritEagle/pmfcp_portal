@@ -21,12 +21,12 @@
                     <div class="mx-auto sm:p-6 lg:p-8">
 
                         <div class="text-center mt-6 text-gray-800 p-5">
-                            Electorates List
+                            PNG Electorates List
                         </div>
 
                         <div class="flex items-center justify-center sm:text-left">
 
-                            <table class="table-auto whitespace-nowrap">
+                            <table class="flex-1 h-8 table-auto whitespace-nowrap overflow-x-auto">
 
                                 <thead class="bg-gray-400">
                                     <tr class="text-left font-bold">

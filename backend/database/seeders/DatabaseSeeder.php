@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Note: Seeding in this order is crucial as the db is protected by foreign key constraints.
+        $this->call(UserSeeder::class);
         $this->call(RegionSeeder::class);
         $this->call(ProvinceSeeder::class);
         $this->call(ElectorateSeeder::class);

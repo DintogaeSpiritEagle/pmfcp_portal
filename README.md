@@ -43,6 +43,11 @@ $ make fresh
 ```bash
 $ make rollback-test
 ```
-6. Begin building!
+6. Login with the test user credentials.
+```bash
+E: test@pmfcparty.com
+P: abcd1234
+````
+7. Begin building!
 
 For more info, please email _Soxx_ or _SpiritEagle_ at ict@pmfcparty.com.
