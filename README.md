@@ -39,7 +39,7 @@ DB_ROOT_PASSWORD=root
 ```bash
 $ make fresh
 ```
-5. If you experience any database related errors, then run the following db rollback command, and repeat step 5.
+5. If you experience any database related errors, then run the following db rollback command, and repeat step 4.
 ```bash
 $ make rollback-test
 ```
