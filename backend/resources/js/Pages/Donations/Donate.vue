@@ -24,5 +24,11 @@
             AppLayout,
             CreateDonateForm,
         },
+
+        props: [
+            'test',
+            'test2',
+            'test3'
+        ],
     })
 </script>
