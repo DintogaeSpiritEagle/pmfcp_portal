@@ -3,7 +3,7 @@
 The PMFCParty Portal is a containerized end-to-end web application that servers two purposes:
 - Membership Portal:
   - User login
-  - Google Maps Landing page
+  - Google Maps Geolocation
 - Payment Gateway (API)
   - SPA Application with two (2) integrations:
     - Receive Donations via Membership Portal
@@ -11,21 +11,14 @@ The PMFCParty Portal is a containerized end-to-end web application that servers 
 ## Important Note
 This document exists to provide technical guidance to the developers of this application.
 
-## License & Copyright
+## Licence & Copyright
 This software application remains the sole property of the &copy;[PMFCParty PNG](https://www.pmfcparty.com/home).
 Any unauthorized duplication of this appqlication for personal, malicious or monetary intent is considered a crime, and punishable by law.
 
 ## Installation on Local environment
 ### Steps
-1. Spin up containers
-```bash
-$ docker-compose up -d --build // build the project containers. Note: In Dev, run once or everytime the containers need to be respawned.
-```
-2. Install / Publish node modules and set `watch` monitor code udpates.
-```bash
-$ make npm-devup
-```
-3. Update `DB_*` environment variables in `.env` file to your preference:
+1. Update the `DB_*` environment variables in the `.env` file in your project root:
+`Note:` _These environment variables will be used by docker-compose in the next step to build your database._
 ```
 DB_CONNECTION=mysql
 DB_HOST=db
@@ -35,6 +28,14 @@ DB_USERNAME=pmfcp
 DB_PASSWORD=pmfcp
 DB_ROOT_PASSWORD=root
 ``` 
+2. Spin up containers
+```bash
+$ docker-compose up -d --build // build the project containers. Note: In Dev, run once or everytime the containers need to be respawned.
+```
+3. Install / Publish node modules and set `watch` to monitor code updates.
+```bash
+$ make npm-devup
+```
 4. Run the DB migrations & seed the database with test data
 ```bash
 $ make fresh
