@@ -8,7 +8,9 @@
 
         <div>
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-                <create-donate-form />
+                <donor-details-form />
+
+                <donation-options />
             </div>
         </div>
     </app-layout>
@@ -17,12 +19,16 @@
 <script>
     import { defineComponent } from 'vue'
     import AppLayout from '@/Layouts/AppLayout.vue'
-    import CreateDonateForm from '@/Pages/Donations/Partials/CreateDonateForm.vue'
+    import DonorDetailsForm from '@/Pages/Donations/Partials/DonorDetailsForm.vue'
+    import UpdateDonorsInformation from '@/Pages/Donations/Partials/UpdateDonorsInformation.vue'
+    import DonationOptions from '@/Pages/Donations/Partials/DonationOptions.vue'
 
     export default defineComponent({
         components: {
             AppLayout,
-            CreateDonateForm,
+            DonorDetailsForm,
+            UpdateDonorsInformation,
+            DonationOptions
         },
 
         props: [
