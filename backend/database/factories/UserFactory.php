@@ -25,7 +25,7 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'PMFCP Test',
+            'name' => 'PMFCP Test2',
             'email' => 'test@pmfcparty.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$.CxyzBQgkrB0hpXjqYCAw.1MFEGm6gpE7KYcBZCux8ak4RI7CU2Pa', // abcd1234
