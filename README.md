@@ -12,7 +12,7 @@ The PMFCParty Portal is a containerized end-to-end web application that servers 
 This document exists to provide technical guidance to the developers of this application.
 
 ## Licence & Copyright
-This software application remains the sole property of the &copy;[PMFCParty PNG](https://www.pmfcparty.com/home).
+This software application remains the sole property of the &copy;[Ark Cyber Security Consultants](https://www.arkcybersecurityconsultants.com).
 Any unauthorized duplication of this appqlication for personal, malicious or monetary intent is considered a crime, and punishable by law.
 
 ## Installation on Local environment
@@ -51,4 +51,4 @@ P: abcd1234
 ````
 7. Begin building!
 
-For more info, please email _Soxx_ or _SpiritEagle_ at ict@pmfcparty.com.
+For more info, please email _SpiritEagle_ at yamis.spiriteagle@gmail.com
